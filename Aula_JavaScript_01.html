@@ -3,11 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <title>Exemplo JavaScript 01</title>
-<!--<script>
-    function dataHora(){
-        document.getElementById('demo').innerHTML = Date();
+
+<script>
+    function dataHora(id){
+        document.getElementById(id).innerHTML = Date() + ", Legal!!!";               
+ 
     }
-</script>-->
+
+    function msg(id, msg){
+        document.getElementById(id).innerHTML = msg;
+    }
+
+</script>
+
 <!--<script src="script-01.js"></script>-->
 
 <body>
@@ -16,7 +24,8 @@
 
 <!--Olá Mundo-->
 <!--<button type="button"
-    onclick="document.getElementById('demo').innerHTML = 'Olá Mundo!'">
+    onclick="document.getElementById('demo').innerHTML = 'Olá Mundo!';
+    document.getElementById('demo02').innerHTML = 'Hello World' ">   
 Clique para mostrar uma mensagem.
 </button>-->
 
@@ -27,12 +36,19 @@ Clique para mostrar Data e hora.
 </button>-->
 
 <!--Exemplo com function -->
-<!--<button type="button"
-    onclick="dataHora()">
+<button type="button"
+    onclick="dataHora('demo')">
 Clique para mostrar Data e hora.
-</button>-->
+</button>
+
+<button type="button"
+    onclick="msg('demo02', 'My text!!!')">
+Clique para mostrar uma mensagem.
+</button>
+
 
 <p id="demo"></p>
+<p id="demo02"></p>
 
 </body>
 </html> 
